@@ -73,5 +73,27 @@ namespace HashTable_BST
         {
             Add(value, head);
         }
+
+        void Find(V value, MyBinaryNode<V> node)
+        {
+            if (value.Equals(node.value))
+            {
+                Console.WriteLine("Element found");
+                return;
+            }
+            else if (value.CompareTo(node.value) < 0 && node.left != null)
+                Find(value, node.left);
+            else if (value.CompareTo(node.value) > 0 && node.right != null)
+                Find(value, node.right);
+            else
+            {
+                Console.WriteLine("Element Not Found");
+            }
+        }
+
+        public void Search(V value)
+        {
+            Find(value, head);
+        }
     }
 }

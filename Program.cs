@@ -159,7 +159,6 @@ namespace HashTable_BST
             Count count = new Count(input);
             count.Execute();
 
-
             BST<int> tree = new BST<int>();
             tree.Insert(56);
             tree.Insert(30);
@@ -176,6 +175,8 @@ namespace HashTable_BST
             tree.Insert(67);
 
             tree.Print();
+
+            tree.Search(69);
 
             Console.ReadLine();
 
