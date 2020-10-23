@@ -152,8 +152,7 @@ namespace HashTable_BST
     {
         static void Main(string[] args)
         {
-            HashTable<string, int> count = new HashTable<string, int>(10);
-            string input = "to be or not to be";
+            string input = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
 
             new Count(input).FindOccurances();
 
