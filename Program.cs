@@ -130,7 +130,7 @@ namespace HashTable_BST
             this.message = msg;
         }
 
-        public void FindOccurances()
+        public void Execute()
         {
             HashTable<string, int> hashTable = new HashTable<string, int>(message.Length);
 
@@ -144,6 +144,8 @@ namespace HashTable_BST
                     hashTable.Add(word, hashTable.Get(word) + 1);
             }
 
+            hashTable.Remove("avoidable", hashTable.Get("avoidable"));
+
             hashTable.DisplayHashMap();
         }
     }
@@ -154,8 +156,9 @@ namespace HashTable_BST
         {
             string input = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
 
-            new Count(input).FindOccurances();
-
+            Count count = new Count(input);
+            count.Execute();
+            
             Console.Read();
         }
     }
